@@ -3,9 +3,30 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.timecalculator",
+    "productName": "Time Calculator",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
   },
   "devDependencies": {
-    "electron": "^23.0.0"
+    "electron": "^23.0.0",
+    "electron-builder": "^23.6.0"
   }
 }
