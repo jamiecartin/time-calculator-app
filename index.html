@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Time Calculator</h1>
+
+    <!-- Duration Input -->
+    <div class="input-group">
+      <label for="duration">Duration (hh:mm):</label>
+      <input type="text" id="duration" placeholder="01:48">
+      <button id="add-entry">Add Duration</button>
+    </div>
+
+    <!-- Start and End Time Input -->
+    <div class="input-group">
+      <h2>Or Calculate from Start/End Time:</h2>
+      <label for="start-time">Start Time (hh:mm):</label>
+      <input type="text" id="start-time" placeholder="09:00">
+      <select id="start-am-pm">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
+      <br>
+      <label for="end-time">End Time (hh:mm):</label>
+      <input type="text" id="end-time" placeholder="05:00">
+      <select id="end-am-pm">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
+      <br>
+      <button id="calculate-duration">Calculate Duration</button>
+    </div>
+
+    <!-- Entries and Totals -->
+    <div class="entries-section">
+      <h2>Entries:</h2>
+      <ul id="entries-list"></ul>
+      <h2>Total Hours:</h2>
+      <p id="total-hours"></p>
+      <p id="total-hours-readable"></p>
+      <button id="clear">Clear All</button>
+    </div>
+
+    <p class="hint">Press <strong>Enter</strong> to add entry, <strong>Escape</strong> to clear all.</p>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
